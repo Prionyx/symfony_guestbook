@@ -17,28 +17,7 @@ easy_admin:
         fields:
           - author
           - { property: 'email', type: 'email' }
-          - { property: 'createdAt', type: 'datetime' }
-        sort: ['createdAt', 'ASC']
-        filters: ['conference']
-  easy_admin:
-  site_name: Conference Guestbook
-
-  design:
-    menu:
-      - { route: 'homepage', label: 'Back to website', icon: 'home' }
-      - { entity: 'Conference', label: 'Conferences', icon: 'map-marker' }
-      - { entity: 'Comment', label: 'Comments', icon: 'comments' }
-
-  entities:
-    Conference:
-      class: App\Entity\Conference
-
-    Comment:
-      class: App\Entity\Comment
-      list:
-        fields:
-          - author
-          - { property: 'email', type: 'email' }
+          - { property: 'photoFilename', type: 'image', 'base_path': "/uploads/photos", label: 'Photo' }
           - { property: 'createdAt', type: 'datetime' }
         sort: ['createdAt', 'ASC']
         filters: ['conference']
@@ -49,12 +28,3 @@ easy_admin:
           - 'author'
           - { property: 'email', type: 'email' }
           - text
-
-    edit:
-        fields:
-          - { property: 'conference' }
-          - { property: 'createdAt', type: datetime, type_options: { attr: { readonly: true } } }
-          - 'author'
-          - { property: 'email', type: 'email' }
-          - text
-

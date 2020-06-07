@@ -1,4 +1,5 @@
 /public/uploads
+/config/secrets
 
 ###> symfony/framework-bundle ###
 /.env.local

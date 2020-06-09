@@ -9,7 +9,6 @@
         "easycorp/easyadmin-bundle": "^2.3",
         "sensio/framework-extra-bundle": "^5.5",
         "symfony/console": "5.0.*",
-        "symfony/dosymfony composer req http-clienttenv": "5.0.*",
         "symfony/flex": "^1.3.1",
         "symfony/framework-bundle": "5.0.*",
         "symfony/http-client": "5.0.*",

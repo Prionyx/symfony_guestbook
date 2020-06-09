@@ -6,15 +6,15 @@ framework:
         transports:
             # https://symfony.com/doc/current/messenger.html#transport-configuration
             async:
-                dsn:'%env(RABBITMQ_DSN)%'
+                dsn: '%env(RABBITMQ_DSN)%'
                 retry_strategy:
                     max_retries: 3
-                    multipler: 2
+                    multiplier: 2
 
             failed: 'doctrine://default?queue_name=failed'
             # sync: 'sync://'
 
-        faulure_transport: failed
+        failure_transport: failed
 
         routing:
             # Route your messages to the transports
